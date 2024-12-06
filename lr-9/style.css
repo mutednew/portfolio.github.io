@@ -1,0 +1,210 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 26px;
+    color: #eee;
+
+    background: url(image/bg.jpg) no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: rgba(238, 238, 238, .2);
+    border: 2px solid rgba(0, 0, 0, .3);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+
+    padding: 50px;
+}
+
+.game-block {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* User */
+.user-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-name {
+    background-color: rgba(51, 51, 51, .3);
+    border-radius: 5px;
+    margin-bottom: 35px;
+    padding: 0 10px;
+}
+
+.number {
+    width: 130px;
+    height: 40px;
+
+    font-weight: 600;
+    text-align: center;
+
+    background-color: #00609d;
+    border-radius: 20px;
+}
+
+/* Score */
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #111;
+}
+
+.score div {
+    margin-bottom: 50px;
+    padding: 0px 30px;
+
+    background-color: #fff100;
+    border-radius: 10px;
+}
+
+.score button {
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 26px;
+
+    background-color: #3f882e;
+    border-radius: 10px;
+    border: none;
+
+    padding: 10px 20px;
+}
+
+#userCard, #pcCard {
+    width: 200px;
+    margin-top: 40px;
+}
+
+.modal {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #001f43;
+    border-radius: 20px;
+
+    padding: 8px 10px;
+}
+
+.modal div {
+    display: flex;
+
+    font-weight: 600;
+    font-size: 30px;
+    color: #eee;
+}
+
+#result {
+    font-size: 30px;
+    color: #eee;
+
+    margin-left: 10px;
+    transition: .2s ease;
+}
+
+#restart {
+    cursor: pointer;
+    height: 40px;
+
+    font-weight: 600;
+    font-size: 20px;
+
+    background-color: #fff100;
+    border-radius: 10px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        padding: 20px;
+
+        margin: 0 10px;
+    }
+
+    .number {
+        width: 60%;
+        height: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .score div, .score button, #restart {
+        font-size: 18px;
+    }
+
+    .score div {
+        margin-bottom: 48%;
+    }
+
+    .modal div, #result {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 584px) {
+    body {
+        font-size: 16px;
+    }
+
+    .wrapper {
+        height: auto;
+    }
+
+    .score div {
+        padding: 0 5px;
+    }
+
+    .number {
+        font-size: 16px;
+    }
+
+    #userCard, #pcCard {
+        width: 80%;
+    }
+
+    .modal {
+        margin-top: 50px;
+    }
+
+    #btn {
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,111 @@
+body {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    color: #eee;
+
+    background-color: #000;
+    background-image: radial-gradient(circle closest-side, #12356d, #000);;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.input-field {
+    position: absolute;
+    top: 15%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80%; 
+    max-width: 300px; 
+    
+    font-size: 20px;
+    color: #578bd5;
+
+    background-color: rgba(25, 71, 149, 0.5);
+    outline: none;
+
+    border: 2px solid #3777dd;
+    border-radius: 3px;
+
+    padding: 5px;
+}
+
+.ball {
+    cursor: pointer;
+    position: relative;
+
+    width: 80vw; 
+    height: 80vw; 
+    max-width: 430px; 
+    max-height: 430px;
+
+    background: url(image/ball.png) no-repeat;
+    background-size: contain;
+}
+
+.ball::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    height: 50%;
+
+    background: url(image/ball-hole.png) no-repeat;
+    background-size: contain;
+}
+
+.shake {
+    animation: shake .9s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-10px, 0); }
+    20% { transform: translate(10px, 0); }
+    30% { transform: translate(-10px, 0); }
+    40% { transform: translate(10px, 0); }
+    50% { transform: translate(-10px, 0); }
+    60% { transform: translate(10px, 0); }
+    70% { transform: translate(-10px, 0); }
+    80% { transform: translate(10px, 0); }
+    90% { transform: translate(-10px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+.answer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 12px; 
+    }
+
+    .input-field {
+        font-size: 16px; 
+    }
+}
