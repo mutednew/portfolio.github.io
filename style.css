@@ -1,4 +1,6 @@
 body {
+    scroll-behavior: smooth;
+    overflow: auto;
     height: 100vh;
 
     font-family: "Saira Semi Condensed", sans-serif;
@@ -28,6 +30,18 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 1600px;
 
     margin: 0 auto;
+}
+
+.active-scroll {
+    transform: translateY(0);
+    opacity: 1;
+    
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.active-scroll.hidden {
+    transform: translateY(50px);
+    opacity: 0;
 }
 
 /* intro */
